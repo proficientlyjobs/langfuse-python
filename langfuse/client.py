@@ -1423,7 +1423,7 @@ class Langfuse(object):
         return updated_prompt
 
     def _url_encode(self, url: str) -> str:
-        return urllib.parse.quote(url)
+        return urllib.parse.quote(url, safe="")
 
     def trace(
         self,
